@@ -1,0 +1,245 @@
+@import "var";
+
+.menu {
+  background-color: $color-bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include flexSB(flex, space-between, center);
+  max-height: 85px;
+  z-index: 10;
+
+
+  .nav {
+    @include flexSB(flex, space-between, center);
+    width: 92%;
+    max-width: $desktop;
+    height: 85px;
+    margin: 0 auto;
+    z-index: 10;
+
+    &__logo {
+      display: block;
+      width: 120rem;
+      max-width: 203px;
+      max-height: 40px;
+    }
+
+    &__btn {
+
+      &-group {
+        @include flexSB(flex, space-between, center);
+        max-width: 250px;
+        width: 150rem;
+      }
+
+      &-buy {
+        max-width: 130px;
+        width: 80rem;
+        max-height: 36px;
+        height: 20rem;
+        min-height: 27px;
+        background-color: $color-primary;
+        border-radius: 32px;
+        color: $color-bg;
+        font-size: 14px;
+      }
+
+      &-burger {
+        position: relative;
+        @include flexColumn(flex, column, space-between, center);
+        background-image: url('../img/burger-line.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        width: 66px;
+        height: 40px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background-image: url('../img/burger-line.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          max-width: 66px;
+          height: 14px;
+          transition-duration: 1s;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-image: url('../img/burger-line.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          max-width: 66px;
+          height: 14px;
+          transition-duration: 1s;
+        }
+
+        &.active {
+          &:before {
+            transform: translateY(100%);
+            transition-duration: 1s;
+          }
+
+          &:after {
+            transform: translateY(-100%);
+            transition-duration: 1s;
+          }
+
+        }
+      }
+    }
+
+    &__mobile {
+      display: none;
+      position: fixed;
+      top: 85px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $color-bg;
+      //transform: translateY(-100%);
+
+
+      animation: drop-down;
+      transition: all 0.5s linear;
+
+      &.active {
+        @include flexColumn(flex, column, center, center);
+
+        transition: all 0.5s linear;
+        //transform: translateY(0%);
+        //transition-duration: 1s;
+      }
+
+      &-list {
+        @include flexColumn(flex, column, center, flex-start);
+        width: 100%;
+      }
+
+      &-item {
+        position: relative;
+        width: 100%;
+        text-align: left;
+
+        &:not(:last-child) {
+          height: 10vh;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 100%;
+          //background-image: url('../img/line-desctop1.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          bottom: 0;
+        }
+
+      }
+
+      &-link {
+        display: block;
+        margin: 0 auto;
+        width: 51%;
+        height: 100%;
+        font-family: 'Merriweather', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+    }
+  }
+
+  &__flop {
+    height: 85px;
+    margin-bottom: 85px;
+    background-color: transparent;
+  }
+
+}
+
+@media (max-width: 554px) {
+  .menu {
+    top: auto;
+    bottom: 0;
+
+    .nav {
+      height: 50px;
+      left: 3.5%;
+      right: 4%;
+
+      &__logo {
+        width: 135rem;
+      }
+
+      &__btn {
+        &-group {
+          width: 127rem;
+        }
+
+        &-buy {
+          width: 80rem;
+          padding: 3.3rem 10rem;
+          font-size: 11.1rem;
+        }
+
+        &-burger {
+          height: 20px;
+          width: 32px;
+
+          &:before {
+            height: 7px;
+          }
+
+          &:after {
+            height: 7px;
+          }
+
+        }
+      }
+
+      &__mobile {
+
+        &.active {
+          top: 0;
+          bottom: 50px;
+        }
+
+        &-link {
+          font-size: 16px;
+        }
+
+      }
+    }
+
+    &__flop {
+      height: 50px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+}
+
+@keyframes drop-down {
+  from  {
+  transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

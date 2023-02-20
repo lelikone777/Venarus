@@ -1,0 +1,119 @@
+.about {
+  padding-top: 100px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 128px;
+    padding-bottom: 130px;
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      &_info {
+        margin-left: 4px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &-img {
+      width: 67px;
+      height: 67px;
+    }
+    &-text {
+      text-align: left;
+      font-family: 'Merriweather' , sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 154.8%;
+      color: #242424;
+      &:last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    height: 582px;
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      max-width: 263px;
+      height: 100%;
+      &_title {
+        text-align: left;
+        font-family: 'Merriweather', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 120%;
+        color: #000000;
+        margin-bottom: 46px;
+      }
+      &_text {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 154.8%;
+        color: #777777;
+        margin-bottom: 14px;
+      }
+      &_link {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-decoration-line: underline;
+        color: #590D56;
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 848px;
+      width: 100%;
+      justify-content: space-between;
+      &_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        border-top: 1px solid black;
+        width: 100%;
+        padding: 30px 30px 30px 100px;
+        &:nth-child(2) {
+          flex-direction: row-reverse;
+        }
+        &:last-child {
+          border-bottom: 1px solid black;
+        }
+      }
+      &_img {
+        width: 124px;
+        height: 124px;
+      }
+      &_text {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        color: #000000;
+
+      }
+    }
+  }
+}

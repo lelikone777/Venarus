@@ -1,0 +1,22 @@
+$desktop: 1140px;
+$color-bg: #ffffff;
+$color-primary: #620F5F;
+
+
+@mixin flexSB($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin flexColumn($display, $flex-direction, $justify-content, $align-items) {
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin text-style($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
