@@ -2,7 +2,7 @@
   margin-top: 177px;
   background: linear-gradient(360deg, rgba(71, 9, 62, 0.5) -7.14%, rgba(255, 255, 255, 0) 25%);
   background-blend-mode: multiply;
-  height: 600px;
+  padding-bottom: 112px;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -15,9 +15,11 @@
     text-align: left;
     justify-content: flex-start;
     max-width: 263px;
+    flex-shrink: 0;
+    width: 23.5%;
     height: 100%;
     &-title {
-      font-family: 'Merriweather', sans-serif;
+      font-family: 'Merriweather-Bold', serif;
       font-style: normal;
       font-weight: 700;
       font-size: 30px;
@@ -26,7 +28,7 @@
       margin-bottom: 26px;
     }
     &-text {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto-Regular', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -45,7 +47,6 @@
       top: 0;
       left: 0;
       width: 700px;
-      height: 387px;
       &_1 {
         position: absolute;
         top: 35px;
@@ -62,13 +63,13 @@
       width: 850px;
       display: flex;
       justify-content: space-between;
-      button {
+      a {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 263px;
         height: 67px;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto-Regular', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -77,6 +78,11 @@
         color: #47093E;
         border: 1px solid #47093E;
         border-radius: 33.5px;
+        &:hover {
+          transition-duration: 0.6s;
+          background: #590D56;
+          color: #FFFFFF;
+        }
       }
     }
   }
@@ -88,7 +94,7 @@
     height: 123px;
     margin: 0 auto;
     text-align: left;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Light', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 34px;
@@ -112,4 +118,75 @@
       font-size: 20px;
     }
   }
+}
+@media (max-width: 1440px) {
+  .buy {
+    &__warning {
+      height: 27.3rem;
+      font-size: 7.5rem;
+      line-height: 1.2;
+      padding: 0 4%;
+    }
+  }
+}
+@media (max-width: 1250px) {
+  .buy {
+    margin-top: 45.45rem;
+    padding-bottom: 28.7rem;
+    &__right {
+      width: 200rem;
+      height: 130rem;
+      &-image {
+        width: 100%;
+        height: auto;
+        &_1 {
+          left: 12rem;
+          width: 121rem;
+        }
+        &_2 {
+          left: 70rem;
+          width: 96rem;
+        }
+      }
+      &-buttons {
+        width: 200rem;
+        a {
+          width: 60rem;
+          height: 17rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .buy {
+    &__left {
+      &-title {
+        font-size: 9rem;
+      }
+      &-text {
+        font-size: 6rem;
+      }
+    }
+    &__right {
+      &-image {
+        &_1 {
+          top: 11rem;
+        }
+        &_2 {
+          top: -18rem;
+        }
+      }
+      &-buttons {
+        a {
+          font-size: 5.8rem;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+
 }

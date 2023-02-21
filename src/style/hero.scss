@@ -1,16 +1,13 @@
 @import "hero-slider";
-
 .hero {
   position: relative;
   width: 100%;
-
   &__bg-img {
     position: absolute;
     width: 100%;
     height: 78.5%;
     z-index: -1;
   }
-
   &__box {
     display: flex;
     height: 100%;
@@ -18,13 +15,11 @@
     gap: 20px;
     width: 100%;
   }
-
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
   &__slider {
     width: 60%;
     display: flex;
@@ -33,24 +28,20 @@
     justify-content: space-between;
     margin-top: auto;
     padding: 220px 0 40px;
-
     &-box {
       width: 600px;
       height: 300px;
     }
-
     &-wrapper {
       width: 100%;
       height: 100%;
     }
-
     &-slide {
       font-size: 40px;
       width: 100%;
       height: 100%;
       background-color: green;
     }
-
     &-buy_btn {
       display: flex;
       justify-content: center;
@@ -60,26 +51,27 @@
       border: 1px solid #FFFFFF;
       border-radius: 33.5px;
       background-color: transparent;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto-Regular', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 21px;
       text-align: center;
       color: #FFFFFF;
+      &:hover {
+        transition-duration: 0.6s;
+        background: #590D56;
+      }
     }
-
   }
-
   &__title {
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Merriweather-Bold', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 55px;
     line-height: 100%;
     color: #000000;
   }
-
   &__btns {
     display: flex;
     flex-direction: column;
@@ -87,25 +79,20 @@
     gap: 32px;
     max-width: 250px;
   }
-
   &__btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-
     &-img {
       width: 67px;
-
       img {
         width: 100%;
         height: 100%;
       }
-
     }
-
     &-link {
-      font-family: 'Roboto' , sans-serif;
+      font-family: 'Roboto-Regular' , sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -114,9 +101,7 @@
       color: #590D56;
       margin-right: auto;
     }
-
   }
-
   &__warning {
     display: flex;
     align-items: center;
@@ -125,7 +110,7 @@
     height: 123px;
     margin: 0 auto;
     text-align: left;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Light', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 34px;
@@ -149,16 +134,15 @@
       font-size: 20px;
     }
   }
-
   &__discount {
     width: 100%;
     display: flex;
     align-items: center;
     height: 94px;
     margin-top: 15px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    font-family: 'Roboto', sans-serif;
+    border-top: 1px solid #47093E;
+    border-bottom: 1px solid #47093E;
+    font-family: 'Roboto-Light', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 48px;
@@ -167,17 +151,87 @@
     color: #590D56;
   }
 }
+@media (max-width: 1440px) {
+  .hero {
+    &__warning {
+      height: 27.3rem;
+      font-size: 7.5rem;
+      line-height: 1.2;
+      padding: 0 4%;
+    }
+  }
+}
+@media (max-width: 1250px) {
+  .hero {
+    &__slider {
+      padding: 57.5rem 0 40px;
+      &-buy_btn {
+        width: 60rem;
+        height: 17rem;
+        //width: 65rem;
+        //height: 20rem;
+      }
+      a {
+        width: 17.4rem;
+        height: 17.4rem;
+      }
+    }
+    &__discount {
+      height: 24.1rem;
+      margin-top: 3.8rem;
+      font-size: 12.3rem;
+      line-height: 1.2;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .hero {
+    &__title {
+      font-size: 17.74rem;
+    }
+    &__slider {
+      &-buy {
+        &_button {
+          line-height: 1.2;
+          font-size: 6rem;
+        }
+      }
+    }
+    &__btn {
+      &-img {
+        width: 21.6rem;
+      }
+
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    &__slider {
+      &-buy_btn {
+        font-size: 7rem;
+        line-height: 1.2;
+      }
+    }
+    &__btn {
+      &-link {
+        font-size: 7rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}
 
 
-
-
-
-
-
-//@media (max-width: 554px) {
-//
-//  .hero {
-//
-//  }
-//
-//}
+@media (max-width: 600px) {
+  .hero {
+    &__slider {
+      &-buy {
+        &_btn {
+          width: 85rem;
+          height: 25rem;
+        }
+      }
+    }
+  }
+}

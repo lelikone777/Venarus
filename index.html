@@ -5,12 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="src/style/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!--    animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!--    swiper-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+<!--    main-->
+    <link rel="stylesheet" href="src/style/main.css">
+
     <title>Венарус</title>
-    <link rel="stylesheet" href="src/style/grid.scss">
 </head>
 <body>
 
@@ -61,7 +66,7 @@
                             <img src="src/img/hero__btn-play.png" alt="play">
                         </div>
                         <div class="hero__btn-link">
-                            <a href="">Схема приема</a>
+                            <a href="#">Схема приема</a>
                         </div>
                     </div>
                     <div class="hero__btn">
@@ -69,7 +74,7 @@
                             <img src="src/img/hero__btn-arrow.png" alt="arrow">
                         </div>
                         <div class="hero__btn-link">
-                            <a href="">Инструкция</a>
+                            <a href="#">Инструкция</a>
                         </div>
                     </div>
                     <div class="hero__btn">
@@ -77,7 +82,7 @@
                             <img src="src/img/hero__btn-marker.png" alt="marker">
                         </div>
                         <div class="hero__btn-link">
-                            <a href="">Где купить</a>
+                            <a href="#">Где купить</a>
                         </div>
                     </div>
                 </div>
@@ -86,61 +91,59 @@
             <div class="hero__slider">
 
                 <div id="wrap">
-                    <div class="container">
-                        <section class="carousel-wrap">
-                            <ul class="carousel">
-                                <li class="items main-pos" id="1">
-                                    <div class="review-card review-card--option-4 text-center">
-                                        <div class="review-card-img"></div>
-                                    </div>
-                                </li>
-                                <li class="items right-pos" id="2">
-                                    <div class="review-card review-card--option-4 text-center">
-                                        <div class="review-card-img"></div>
-                                    </div>
-                                </li>
-                                <li class="items back-pos" id="3">
-                                    <div class="review-card review-card--option-4 text-center">
-                                        <div class="review-card-img"></div>
-                                    </div>
+                    <section class="carousel-wrap">
+                        <ul class="carousel">
+                            <li class="items main-pos" id="1">
+                                <div class="review-card review-card--option-4 text-center">
+                                    <div class="review-card-img"></div>
+                                </div>
+                            </li>
+                            <li class="items right-pos" id="2">
+                                <div class="review-card review-card--option-4 text-center">
+                                    <div class="review-card-img"></div>
+                                </div>
+                            </li>
+                            <li class="items back-pos" id="3">
+                                <div class="review-card review-card--option-4 text-center">
+                                    <div class="review-card-img"></div>
+                                </div>
 
-                                </li>
-                                <li class="items back-pos" id="4">
-                                    <div class="review-card review-card--option-4 text-center">
-                                        <div class="review-card-img"></div>
-                                    </div>
+                            </li>
+                            <li class="items back-pos" id="4">
+                                <div class="review-card review-card--option-4 text-center">
+                                    <div class="review-card-img"></div>
+                                </div>
 
-                                </li>
-                                <li class="items back-pos" id="5">
-                                    <div class="review-card review-card--option-4 text-center">
-                                        <div class="review-card-img"></div>
-                                    </div>
+                            </li>
+                            <li class="items back-pos" id="5">
+                                <div class="review-card review-card--option-4 text-center">
+                                    <div class="review-card-img"></div>
+                                </div>
 
-                                </li>
-                                <li class="items back-pos" id="6">
-                                    <div class="review-card review-card--option-4 text-center">
-                                        <div class="review-card-img"></div>
-                                    </div>
+                            </li>
+                            <li class="items back-pos" id="6">
+                                <div class="review-card review-card--option-4 text-center">
+                                    <div class="review-card-img"></div>
+                                </div>
 
-                                </li>
-                                <li class="items left-pos" id="7">
-                                    <div class="review-card review-card--option-4 text-center">
-                                        <div class="review-card-img"></div>
-                                    </div>
-
-                                </li>
-                            </ul>
-                            <span class="slider">
-                              <a href="javascript:void(0);" value="Prev" id="prev"></a>
-                              <a href="javascript:void(0);" value="Next" id="next"></a>
-                            </span>
-                                        </section>
-                    </div>
+                            </li>
+                            <li class="items left-pos" id="7">
+                                <div class="review-card review-card--option-4 text-center">
+                                    <div class="review-card-img"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="slider">
+                          <a href="javascript:void(0);" value="Prev" id="prev"></a>
+                          <a href="javascript:void(0);" value="Next" id="next"></a>
+                        </span>
+                    </section>
                 </div>
 
-                <div class="hero__slider-buy_btn">
+
+                <button type="button" class="hero__slider-buy_btn buy_btn">
                     Где купить >
-                </div>
+                </button>
 
             </div>
 
@@ -172,14 +175,15 @@
             </div>
             <div class="about__top-item">
                 <img src="src/img/about-square.png" alt="square" class="about__top-img">
-                <div class="about__top-text">Новая дозировка <br>
+                <div class="about__top-text">Новая&nbsp; дозировка <br>
                     100 мг + 900 мг
                 </div>
             </div>
             <div class="about__top-item">
                 <img src="src/img/about-pill.png" alt="pill" class="about__top-img">
                 <div class="about__top-text">
-                    <p>Удобный прием. <br>Одна таблетка в сутки*</p>
+                    <p>Удобный прием. <br>Одна таблетка в сутки*
+                    </p>
                     <span class="about__top-item_info">
                         <img src="src/img/about-info.png" alt="info">
                     </span>
@@ -213,8 +217,9 @@
                         <img src="src/img/about-2.png" alt="circle">
                     </div>
                     <div class="about__main-right_text">
-                        Помогает
-                        предотвратить судороги
+                        Способствует
+                        снижению тяжести
+                        в ногах
                     </div>
                 </div>
                 <div class="about__main-right_item">
@@ -222,8 +227,8 @@
                         <img src="src/img/about-3.png" alt="circle">
                     </div>
                     <div class="about__main-right_text">
-                        Помогает
-                        предотвратить судороги
+                        Способствует снижению
+                        болевых ощущений
                     </div>
                 </div>
             </div>
@@ -246,9 +251,21 @@
             <div class="about-slider__right">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a href="#"></a></div>
-                        <div class="swiper-slide"><a href="#"></a></div>
-                        <div class="swiper-slide"><a href="#"></a></div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="src/img/about-slider.png" alt="slide-1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="src/img/about-slider.png" alt="slide-2">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="src/img/about-slider.png" alt="slide-3">
+                            </a>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -296,7 +313,7 @@
                 </div>
             </div>
         </div>
-        <button class="grid__button" type="button">
+        <button class="grid__button buy__btn" type="button">
             Подробнее >
         </button>
     </div>
@@ -320,19 +337,26 @@
 
                 
                 <div class="buy__right-buttons">
-                    <button type="button">apteka.ru</button>
-                    <button type="button">366.ru</button>
-                    <button type="button">stolichki.ru</button>
+                    <a href="https://apteka.ru/" >
+                        apteka.ru
+                    </a>
+                    <a href="https://366.ru/">
+                        366.ru
+                    </a>
+                    <a href="https://stolichki.ru/">
+                        stolichki.ru
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="buy__warning">
-        <p>
-            Имеются противопоказания, необходимо ознакомиться с инструкцией или получить консультацию специалиста
-        </p>
-    </div>
+</div>
+
+<div class="buy__warning">
+    <p>
+        Имеются противопоказания, необходимо ознакомиться с инструкцией или получить консультацию специалиста
+    </p>
 </div>
 
 <footer class="footer">
@@ -367,8 +391,12 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 <script src="src/script/slider.js"></script>
+
+
 <script src="src/script/main.js"></script>
 </body>
 </html>

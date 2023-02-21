@@ -36,11 +36,6 @@ const galleryControlsContainer = document.querySelector('.gallery-controls');
 const galleryControls = ['previous', 'next'];
 const galleryItems = document.querySelectorAll('.gallery-item');
 
-
-
-
-
-
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',

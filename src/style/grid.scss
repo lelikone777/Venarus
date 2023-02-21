@@ -12,10 +12,12 @@
     flex-direction: column;
     justify-content: flex-start;
     max-width: 263px;
+    flex-shrink: 0;
+    width: 23.5%;
     height: 100%;
     &-title {
       text-align: left;
-      font-family: 'Merriweather', sans-serif, sans-serif;
+      font-family: 'Merriweather-Bold', serif;
       font-style: normal;
       font-weight: 700;
       font-size: 30px;
@@ -24,20 +26,17 @@
       margin-bottom: 46px;
     }
   }
-
-
-
   &__right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
-    height: 457px;
     &-card {
       position: relative;
       background: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%);
       border-radius: 18px;
+      overflow: hidden;
       &_1 {
         grid-area: 1 / 1 / 3 / 2;
       }
@@ -58,8 +57,9 @@
       .card-title {
         position: absolute;
         left: 28px;
+        right: 10px;
         top: 30px;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto-Light', sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 36px;
@@ -78,7 +78,6 @@
           width: 100%;
           height: 100%;
           overflow: hidden;
-          border-radius: 20px;
         }
       }
     }
@@ -93,7 +92,7 @@
     margin-top: 35px;
     border: 1px solid #47093E;
     border-radius: 33.5px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Regular', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -104,6 +103,48 @@
       transition-duration: 0.3s;
       color: #FFFFFF;
       background-color: #590D56;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .grid {
+    margin-top: 42.3rem;
+    &__right {
+      width: 200rem;
+      &-card {
+        .card-title {
+          font-size: 9.2rem;
+          left: 10px;
+          right: 10px;
+        }
+        &:last-child {
+          .card-title {
+            left: 30px;
+          }
+        }
+      }
+    }
+    &__button {
+      width: 60rem;
+      height: 17rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    &__left {
+      &-title {
+        font-size: 9rem;
+      }
+    }
+    &__right {
+      gap: 8rem;
+    }
+    &__button {
+      font-size: 5.8rem;
+      line-height: 1.2;
     }
   }
 }

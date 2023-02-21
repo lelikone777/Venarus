@@ -28,6 +28,9 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  &:nth-child(2) {
+    background-image: url("../../src/img/hero__slider-img1.png");
+  }
 }
 .items {
   position: absolute;
@@ -75,7 +78,7 @@
   height: 68px;
   background-image: url('../../src/img/slider-arrow-left.png');
   background-position: center center;
-  background-size: 28px / 13px;
+  background-size: 13px 23px;
   background-repeat: no-repeat;
 }
 .slider #prev,
@@ -88,6 +91,60 @@
   transform: rotate(-180deg);
 }
 .slider #prev {
-  left: 220px;
+  left: 235px;
   bottom: -215px;
+}
+@media (max-width: 1250px) {
+  #wrap {
+    padding: 0 0 20rem;
+  }
+  .carousel > li {
+    width: 120rem;
+    height: 77.3rem;
+  }
+  .carousel-wrap {
+    width: 162.6rem;
+    height: 82.7rem;
+  }
+  .right-pos {
+    margin-left: 29rem;
+  }
+  .left-pos {
+    margin-left: -20rem;
+  }
+  .slider #next {
+    left: 84.45rem;
+    bottom: -48rem;
+  }
+  .slider #prev {
+    left: 58rem;
+    bottom: -48rem;
+  }
+  .slider {
+    top: 59%;
+    a {
+      background-size: 3rem 6rem;
+    }
+  }
+  .right-pos {
+    //margin-left: 5rem;
+    transform: translate(15rem, -85px);
+  }
+  .left-pos {
+    //margin-left: -10rem;
+    transform: translate(-15rem, -75px);
+
+  }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 480px) {
+
 }

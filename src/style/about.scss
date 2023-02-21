@@ -1,10 +1,10 @@
+@import "about-slider";
 .about {
   padding-top: 100px;
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 128px;
     padding-bottom: 130px;
     &-item {
       display: flex;
@@ -23,7 +23,7 @@
     }
     &-text {
       text-align: left;
-      font-family: 'Merriweather' , sans-serif;
+      font-family: 'Merriweather-Bold', serif;
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
@@ -39,18 +39,19 @@
   &__main {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 30px;
-    height: 582px;
     &-left {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      flex-shrink: 0;
       max-width: 263px;
+      width: 23.5%;
       height: 100%;
       &_title {
         text-align: left;
-        font-family: 'Merriweather', sans-serif;
+        font-family: 'Merriweather-Bold', serif;
         font-style: normal;
         font-weight: 700;
         font-size: 30px;
@@ -59,7 +60,7 @@
         margin-bottom: 46px;
       }
       &_text {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto-Regular', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -68,7 +69,7 @@
         margin-bottom: 14px;
       }
       &_link {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto-Regular', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -89,22 +90,31 @@
         justify-content: space-between;
         align-items: center;
         gap: 60px;
-        border-top: 1px solid black;
+        border-top: 1px solid #47093E;
         width: 100%;
         padding: 30px 30px 30px 100px;
         &:nth-child(2) {
           flex-direction: row-reverse;
+          > .about__main-right_text {
+            margin-left: auto;
+            margin-right: 0;
+          }
         }
         &:last-child {
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid #47093E;
         }
       }
       &_img {
         width: 124px;
         height: 124px;
+        flex-shrink: 0;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
       &_text {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto-Light', sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 30px;
@@ -112,8 +122,73 @@
         display: flex;
         align-items: center;
         color: #000000;
-
+        flex-basis: 50%;
+        margin-right: auto;
       }
     }
+  }
+}
+@media (max-width: 1250px) {
+  .about {
+    padding-top: 25.6rem;
+    &__top {
+      padding-bottom: 33.3rem;
+      gap: 10rem;
+    }
+    &__main {
+      &-right {
+        width: 200rem;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .about {
+    &__top {
+      &-img {
+        width: 21.6rem;
+        height: 21.6rem;
+      }
+      &-text {
+        font-size: 5.15rem;
+      }
+      &-item {
+        &_info {
+          img  {
+            width: 10rem;
+          }
+        }
+      }
+    }
+    &__main {
+      &-left {
+        &_title {
+          font-size: 9rem;
+        }
+        &_text {
+          font-size: 6rem;
+        }
+        &_link {
+          font-size: 6rem;
+        }
+      }
+      &-right {
+        &_item {
+          gap: 20rem;
+          padding: 9.7rem 9.7rem 9.7rem 33rem;
+        }
+        &_img {
+          width: 40rem;
+          height: 40rem;
+        }
+        &_text {
+          font-size: 9.7rem;
+        }
+      }
+    }
+  }
+  .about-slider__right .swiper-slide > a:before {
+    width: 22rem;
+    height: 22rem;
   }
 }

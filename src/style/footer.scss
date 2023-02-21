@@ -11,7 +11,7 @@
     flex-direction: column;
     height: 100%;
     .footer-link {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto-Light', sans-serif;
       font-style: normal;
       font-weight: 300;
       font-size: 12px;
@@ -21,7 +21,7 @@
     }
     address {
       margin-top: 50px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto-Regular', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
@@ -53,7 +53,7 @@
         width: 90px;
       }
       .t {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto-Regular', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -61,5 +61,41 @@
         color: #828282;
       }
     }
+  }
+}
+
+@media (max-width: 1250px) {
+  .footer {
+    padding-top: 42rem;
+    padding-bottom: 17rem;
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    &__columns {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      &:first-child, &:nth-child(2) {
+        width: 50%;
+      }
+      &:last-child {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    &__columns {
+      &:last-child {
+        align-items: center;
+      }
+    }
+  }
+}
+@media (max-width: 554px) {
+  .footer {
+    padding-bottom: calc(17rem + 80px);
   }
 }
