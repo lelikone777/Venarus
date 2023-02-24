@@ -8,7 +8,7 @@
   right: 0;
   @include flexSB(flex, space-between, center);
   max-height: 85px;
-  z-index: 10;
+  z-index: 8;
 
 
   .nav {
@@ -136,19 +136,50 @@
         text-align: left;
         height: 10vh;
 
-        //&:not(:last-child) {
-        //}
+        img {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+        }
+
+        &:nth-child(1) {
+          &:before {
+            //background-image: url('../img/burger-line-5.png');
+          }
+        }
+        &:nth-child(2) {
+          &:before {
+            //background-image: url('../img/burger-line-4.png');
+          }
+        }
+        &:nth-child(3) {
+          &:before {
+            //background-image: url('../img/burger-line-3.png');
+          }
+        }
+        &:nth-child(4) {
+          &:before {
+            //background-image: url('../img/burger-line-2.png');
+          }
+        }
+        &:nth-child(5) {
+          &:before {
+            //background-image: url('../img/burger-line-1.png');
+          }
+        }
 
         &:before {
           content: '';
           position: absolute;
-          left: 0;
-          right: 0;
+          //left: 0;
+          //right: 0;
           height: 100%;
-          background-image: url('../img/burger-line-1.png');
-          background-repeat: no-repeat;
-          background-size: contain;
+          width: 100%;
+          //background-repeat: no-repeat;
+          background-size: cover;
           bottom: 0;
+          z-index: -1;
         }
 
       }

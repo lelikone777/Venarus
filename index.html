@@ -18,13 +18,25 @@
     <title>Венарус</title>
 </head>
 <body>
-
+<div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__body">
+        <div class="modal__close"></div>
+        <form action="" method="post">
+            <h2>Где купить</h2>
+            <input type="text" name="name" placeholder="Введите имя">
+            <input type="tel" name="tel" placeholder="Введите телефон">
+            <button type="submit">Оставить заявку</button>
+        </form>
+        
+    </div>
+</div>
 <div class="menu__flop"></div>
 <div class="menu">
     <nav class="nav">
         <img src="src/img/logo-desktop.png" alt="logo" class="nav__logo">
         <div class="nav__btn-group">
-            <button class="nav__btn-buy">Где купить</button>
+            <button class="nav__btn-buy buy_btn">Где купить</button>
             <button class="nav__btn-burger">
             </button>
         </div>
@@ -32,19 +44,24 @@
 
             <ul class="nav__mobile-list">
                 <li class="nav__mobile-item">
-                    <a href="" class="nav__mobile-link">Где купить</a>
+                    <a href="#buy" class="nav__mobile-link">Где купить</a>
+                    <img src="src/img/burger-line-5.png" alt="line">
                 </li>
                 <li class="nav__mobile-item">
-                    <a href="" class="nav__mobile-link">О препарате</a>
+                    <a href="#about" class="nav__mobile-link">О препарате</a>
+                    <img src="src/img/burger-line-3.png" alt="line">
                 </li>
                 <li class="nav__mobile-item">
-                    <a href="" class="nav__mobile-link">О варикозе</a>
+                    <a href="#hero" class="nav__mobile-link">О варикозе</a>
+                    <img src="src/img/burger-line-3.png" alt="line">
                 </li>
                 <li class="nav__mobile-item">
-                    <a href="" class="nav__mobile-link">Решение</a>
+                    <a href="#grid" class="nav__mobile-link">Решение</a>
+                    <img src="src/img/burger-line-3.png" alt="line">
                 </li>
                 <li class="nav__mobile-item">
-                    <a href="" class="nav__mobile-link">Специалистам</a>
+                    <a href="#about-slider" class="nav__mobile-link">Специалистам</a>
+                    <img src="src/img/burger-line-3.png" alt="line">
                 </li>
             </ul>
 
@@ -52,7 +69,7 @@
     </nav>
 </div>
 
-<div class="hero">
+<div class="hero" id="hero">
     <img class="hero__bg-img" src="src/img/hero-bg.png" alt="bg-image">
     <div class="container">
         <div class="hero__box">
@@ -159,13 +176,13 @@
 
     <div class="hero__discount">
         <marquee direction="right" loop="infinite">
-            получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>>
+            получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>>
         </marquee >
     </div>
 
 </div>
 
-<div class="about">
+<div class="about" id="about">
     <div class="container">
         <div class="about__top">
             <div class="about__top-item">
@@ -186,6 +203,9 @@
                     </p>
                     <span class="about__top-item_info">
                         <img src="src/img/about-info.png" alt="info">
+                        <span class="about__top-item_info--modal">
+                            Рекомендованная суточная норма*
+                        </span>
                     </span>
                 </div>
             </div>
@@ -237,7 +257,7 @@
     </div>
 </div>
 
-<div class="about-slider">
+<div class="about-slider" id="about-slider">
     <div class="container">
         <div class="about-slider__wrap">
             <div class="about-slider__left">
@@ -252,18 +272,22 @@
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="#">
-                                <img src="src/img/about-slider.png" alt="slide-1">
+                            <a>
+<!--                                <img src="src/img/about-slider.png" alt="slide-1">-->
+                                <video data-video="1" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" autoplay loop muted preload="auto"></video>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#">
-                                <img src="src/img/about-slider.png" alt="slide-2">
+                            <a>
+<!--                                <img src="src/img/about-slider.png" alt="slide-2">-->
+                                <video data-video="2" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" autoplay loop muted preload="auto"></video>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#">
-                                <img src="src/img/about-slider.png" alt="slide-3">
+                            <a>
+<!--                                <img src="src/img/about-slider.png" alt="slide-3">-->
+                                <video data-video="3" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" autoplay loop muted preload="auto"></video>
+
                             </a>
                         </div>
                     </div>
@@ -274,7 +298,7 @@
     </div>
 </div>
 
-<div class="grid">
+<div class="grid" id="grid">
     <div class="container">
         <div class="grid__wrapper">
             <div class="grid__left">
@@ -313,13 +337,13 @@
                 </div>
             </div>
         </div>
-        <button class="grid__button buy__btn" type="button">
+        <button class="grid__button buy_btn" type="button">
             Подробнее >
         </button>
     </div>
 </div>
 
-<div class="buy">
+<div class="buy" id="buy">
     <div class="container">
         <div class="buy__wrapper">
             <div class="buy__left">
@@ -386,8 +410,8 @@
 
         </div>
     </div>
-</footer>
 
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </script>

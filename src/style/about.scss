@@ -12,14 +12,40 @@
       align-items: center;
       gap: 30px;
       &_info {
+        position: relative;
         margin-left: 4px;
         width: 30px;
         height: 30px;
+        cursor: pointer;
+        &--modal {
+          transition-duration: 0.6s;
+          font-family: 'Roboto-Regular', sans-serif;
+          font-size: 6rem;
+          position: absolute;
+          left: -84rem;
+          top: -17rem;
+          padding: 6rem 8rem;
+          visibility: hidden;
+          //width: 40rem;
+          //height: 20rem
+          text-align: center;
+          color: black;
+          background-color: #fff;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+          border: 1px solid black;
+          &.visible {
+            visibility: visible;
+            transition-duration: 0.6s;
+          }
+        }
       }
     }
     &-img {
       width: 67px;
       height: 67px;
+      cursor: pointer;
     }
     &-text {
       text-align: left;
